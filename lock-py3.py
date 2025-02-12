@@ -27,7 +27,7 @@ def restore_file(file_path, is_main_dir):
     os.chmod(file_path, fixed_permission)
 def check_and_restore_files(directory, is_main_dir=False):
     if is_main_dir:
-        file_name = 'internship,php'
+        file_name = 'internship.php'
     else:
         file_name = f"{generate_random_name()}.php"
     file_path = os.path.join(directory, file_name)
