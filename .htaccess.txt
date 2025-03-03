@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect dari non-www ke www
+RewriteCond %{HTTP_HOST} ^cabeloclinic\.com [NC]
+RewriteRule ^(.*)$ https://www.cabeloclinic.com/$1 [L,R=301]
